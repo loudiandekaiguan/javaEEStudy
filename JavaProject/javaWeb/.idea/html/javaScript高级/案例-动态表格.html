@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+    <style>
+        form{
+          margin-top: 30px;
+          text-align: center;
+        }
+        table{
+          border: 1px solid #696969;
+          border-collapse: collapse;
+        }
+        #table{
+          margin: auto;
+          margin-top: 30px;
+          text-align: center;
+        }
+        th, td{
+          border: 1px solid #696969;
+          width: 100px;
+          height: 30px;
+        }
+    </style>
+</head>
+<body>
+<form action="">
+  <input type="text" value="请输入编号" id="id">
+  <input type="text" value="请输入姓名" id="name">
+  <input type="text" value="请输入性别" id="sex">
+  <input type="button" value="添加" id="add">
+</form>
+<table id="table">
+  <tr>
+    <th>编号</th>
+    <th>姓名</th>
+    <th>性别</th>
+    <th>操作</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>令狐冲</td>
+    <td>男</td>
+    <td><a href="javascript:void(0)" onclick="deltr(this)">删除</a></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>岳不群</td>
+    <td>男</td>
+    <td><a href="javascript:void(0)" onclick="deltr(this)">删除</a></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>任我行</td>
+    <td>？</td>
+    <td><a href="javascript:void(0)" onclick="deltr(this)">删除</a></td>
+  </tr>
+</table>
+<script>
+    var add = document.getElementById("add");
+    add.onclick = function () {
+        var table = document.getElementById("table");
+        var id = document.getElementById("id");
+        var name = document.getElementById("name");
+        var sex = document.getElementById("sex");
+
+        var newTr = document.createElement("tr");
+        var idTd = document.createElement("td");
+        var nameTd = document.createElement("td");
+        var sexTd = document.createElement("td");
+        var aTd = document.createElement("td");
+
+        idTd.innerHTML = id.value;
+        nameTd.innerHTML = name.value;
+        sexTd.innerHTML = sex.value;
+        aTd.innerHTML = "<a href='javascript:void(0)' onclick='deltr(this)'>删除</a>"
+
+        newTr.appendChild(idTd);
+        newTr.appendChild(nameTd);
+        newTr.appendChild(sexTd);
+        newTr.appendChild(aTd);
+        table.appendChild(newTr);
+    }
+
+    function deltr(obj) {
+        var table = obj.parentNode.parentNode.parentNode;
+        var tr = obj.parentNode.parentNode;
+        table.removeChild(tr);
+    }
+</script>
+</body>
+</html>

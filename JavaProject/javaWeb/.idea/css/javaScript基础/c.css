@@ -1,0 +1,11 @@
+div{
+    border: 1px solid red;
+    width: 100px;
+}
+.div1, .div2{
+    float: left;
+}
+
+.div3{
+    float: right;
+}

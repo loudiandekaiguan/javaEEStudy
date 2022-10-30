@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>dom</title>
+
+    </head>
+    <body>
+    <img src="../../img/close.png" alt="error" id="light">
+    <script>
+        var light = document.getElementById("light");
+        var flag = false;
+        function fun () {
+            if(flag == false){
+                light.src = "../../img/open.jpg";
+                flag = true;
+            }else{
+                light.src = "../../img/close.png";
+                flag = false;
+            }
+        }
+        light.onclick = fun;
+    </script>
+    </body>
+</html>

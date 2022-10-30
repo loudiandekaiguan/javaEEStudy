@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var str = "http://baidu.com?wd=你好世界";
+        var encodeuri = encodeURI(str);
+        document.write(encodeuri + "<br>");
+        var newStr = decodeURI(encodeuri);
+        document.write(newStr + "<br>");
+
+        var str2 = "http://baidu.com?wd=你好世界";
+        var encodeuri2 = encodeURIComponent(str2);
+        document.write(encodeuri2 + "<br>");
+        var newStr2 = decodeURIComponent(encodeuri2);
+        document.write(newStr2 + "<br>");
+
+        document.write(NaN == NaN + "<br>");
+        document.write(isNaN(NaN) + "<br>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

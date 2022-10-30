@@ -1,0 +1,26 @@
+
+
+div>p{
+    color: blue;
+}
+
+.a{
+    color: red;
+}
+
+input[type="text"]{
+    border: 1px solid red;
+}
+
+a:hover{
+   color: red;
+}
+a:active{
+    color: green;
+}
+a:visited{
+    color: yellow;
+}
+a:link{
+    font-size: 50px;
+}

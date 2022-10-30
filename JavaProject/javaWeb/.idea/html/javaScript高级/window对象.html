@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>window对象</title>
+
+  </head>
+  <body>
+    <input type="button" value="newWindow" id="openBtn">
+    <input type="button" value="closeWindow" id="closeBtn">
+    <script>
+      // alert("helloworld");
+      // window.alert("helloworld");
+      // var flag = window.confirm("确定退出吗");
+      // alert(flag);
+      // var username = window.prompt("请输入用户名");
+      // alert(username);
+
+      // var window1;
+      // var btn = document.getElementById("openBtn");
+      // btn.onclick = function () {
+      //   window1 = open("https://www.baidu.com");
+      // }
+      // var btn2 = document.getElementById("closeBtn");
+      // btn2.onclick = function () {
+      //   window1.close();
+      // }
+
+      var timeout = setTimeout("fun()", 1000);
+      clearTimeout(timeout);
+      function fun() {
+        document.write("时间到" + "<br>");
+      }
+      setInterval("fun()", 1000);
+    </script>
+  </body>
+</html>
